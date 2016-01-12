@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="UserControlExercise.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UserControlExercise"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:DataSource />
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <local:HeaderControl x:Name="TickerInstance" local:DialogProperties.Text="{Binding DialogValue}" 
+                             Title="{Binding TitleValue}" />
+    </Grid>
+</Page>
