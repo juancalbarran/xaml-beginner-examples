@@ -1,0 +1,1 @@
+c:\users\smartmatic\documents\visual studio 2015\Projects\CustomEvents\CustomEvents\CustomEvents.csproj;x86
