@@ -1,0 +1,1 @@
+c:\users\smartmatic\documents\visual studio 2015\Projects\AttachedPropertiesExercise1\AttachedPropertiesExercise1\AttachedPropertiesExercise.csproj;x86
