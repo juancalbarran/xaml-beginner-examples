@@ -1,1 +1,0 @@
-C:\Users\Smartmatic\Documents\Visual Studio 2015\Projects\Converter\Converter\Converter.csproj;x86
