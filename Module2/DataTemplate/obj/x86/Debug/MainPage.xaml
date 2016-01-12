@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="DataTemplate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataTemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:vm="using:DataTemplate.ViewModels"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <vm:ClassroomViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="{Binding ClassroomName}" FontSize="40" FontWeight="Bold" />
+        <ListBox Grid.Row="1" ItemsSource="{Binding Students}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="100" Width="100" Margin="10">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{Binding FavoriteColor}" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Margin="10">
+                            <Run Text="{Binding Name}" FontStyle="Italic" FontSize="24" />
+                            <Run Text=" [" />
+                            <Run Text="{Binding Age}" />
+                            <Run Text="]" />
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>
+
